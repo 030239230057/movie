@@ -15,7 +15,8 @@
         
         /* --- Phần Banner --- */
         .banner-section {
-            background-image: url('{{ asset("images/banner.jpg") }}'); 
+            /* Đường dẫn đã được sửa để trỏ vào storage/images/banner.jpg */
+            background-image: url('{{ asset("storage/images/banner.jpg") }}'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -149,7 +150,7 @@
             padding: 8px 12px;
         }
 
-        /* --- TÙY CHỈNH Ô CHỌN FILE ĐÚNG YÊU CẦU --- */
+        /* --- TÙY CHỈNH Ô CHỌN FILE --- */
         .custom-file-box {
             border: 1px solid #ced4da;
             border-radius: 6px;
@@ -160,7 +161,7 @@
             color: black;
         }
         .btn-browse {
-            background-color: #efefef; /* Màu xám nhạt như nút thật */
+            background-color: #efefef; 
             border: 1px solid #767676;
             border-radius: 3px;
             padding: 3px 8px;
@@ -249,7 +250,7 @@
 
                     <div class="form-group">
                         <label>Ngày phát hành</label>
-                        <input type="text" name="ngay_phat_hanh" class="form-control" value="{{ old('ngay_phat_hanh') }}">
+                        <input type="text" name="ngay_phat_hanh" class="form-control" placeholder="" value="{{ old('ngay_phat_hanh') }}">
                         @error('ngay_phat_hanh') 
                             <small class="text-danger">{{ $message }}</small> 
                         @enderror
