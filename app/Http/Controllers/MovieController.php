@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class MovieController extends Controller
 {
-
+    // Hàm hiển thị danh sách
     public function trangQuanLy()
     {
         

@@ -9,4 +9,5 @@ Route::get('/', function () {
 
 Route::get('/admin/movies', [MovieController::class, 'trangQuanLy'])->name('admin.movies');
 
+// 3. Chức năng Xóa phim
 Route::get('/admin/movies/delete/{id}', [MovieController::class, 'xoaMemPhim'])->name('admin.movies.delete');

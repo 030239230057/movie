@@ -39,6 +39,7 @@
 
       
         .banner {
+
             background-image: url('{{ asset('storage/banner.jpg') }}'); 
             background-size: cover;
             background-position: center;
@@ -65,7 +66,7 @@
             
             <div class="col-md-3 col-lg-2 sidebar-genres">
                 <div class="sidebar-header">
-                     Thể loại phim
+                    📁 Thể loại phim
                 </div>
                 <ul>
                     <li>Phim Hành Động</li>
@@ -113,10 +114,10 @@
                             </td>
                             <td style="max-width: 150px;">{{ $phim->movie_name_vn ?? $phim->title ?? 'Đang cập nhật' }}</td>
                             
-                            <td style="max-width: 250px;">{{ Str::limit($phim->overview ?? 'Nội dung đang cập nhật...', 80) }}</td>
+                            <td style="max-width: 250px;">{{ Str::limit($phim->overview_vn ?? 'Nội dung đang cập nhật...', 80) }}</td>
                             
                             <td class="text-center">{{ $phim->release_date ?? 'N/A' }}</td>
-                            <td class="text-center">{{ $phim->rating ?? 'N/A' }}</td>
+                            <td class="text-center">{{ $phim->vote_average ?? 'N/A' }}</td>
                             
                             <td class="text-center" style="min-width: 120px;">
                                 <a href="{{ url('/chi-tiet/' . $phim->id) }}" class="btn btn-primary btn-sm">Xem</a>
