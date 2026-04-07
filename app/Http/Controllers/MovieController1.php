@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
 class MovieController1 extends Controller
 {
     private function getCommonData() {
@@ -14,7 +12,7 @@ class MovieController1 extends Controller
         ];
     }
 
-    // 2.1 Trang chủ: Đã cập nhật điều kiện lọc theo yêu cầu
+    // 2.1 Trang chủ
     public function index() {
         try {
             $data = $this->getCommonData();
